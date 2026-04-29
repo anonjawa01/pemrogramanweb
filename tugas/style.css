@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,17 +46,23 @@ body {
     color: #1a1a1a;
 }
 
-#search {
+#home {
     width: 100%;
-    height: 65vh;
+    height: 85vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1610809376778-928ee2c3a561?q=80&w=2340&auto=format&fit=crop");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 2em;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .title {
@@ -88,6 +95,7 @@ body {
     gap: 1.5em;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     flex-wrap: wrap;
+    max-width: 1000px;
 }
 
 .form-group {
@@ -144,19 +152,20 @@ body {
 .car-list-wrapper {
     max-width: 1200px;
     margin: 4em auto;
+    padding: 0 20px;
 }
 
 .car-list-wrapper h2 {
     font-size: 1.8em;
     font-weight: 600;
-    margin: 0 0 1em 20px;
+    margin: 0 0 1em 0;
     color: #1a1a1a;
 }
 
 .car-list {
     display: flex;
     gap: 2em;
-    padding: 1em 20px 3em 20px;
+    padding: 1em 0 3em 0;
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -202,4 +211,49 @@ body {
     font-size: 0.9em;
     color: #888888;
     line-height: 1.5;
+}
+
+.footer-simple {
+    padding: 4em 0;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 1.2em 2em;
+    }
+    .form-container {
+        gap: 1em;
+        padding: 1.5em;
+    }
+    .form-container select, .form-container input {
+        width: 100%;
+    }
+    .form-group {
+        width: 100%;
+    }
+    .form-container button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+    }
+    .navbar nav {
+        gap: 1.5em;
+    }
+    .title h1 {
+        font-size: 2.5em;
+    }
+    #home {
+        height: auto;
+        padding: 4em 1em;
+    }
 }
