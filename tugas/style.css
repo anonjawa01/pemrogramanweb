@@ -214,99 +214,98 @@ body {
 }
 
 .contact-section {
-    background-color: #ffffff;
     padding: 6em 20px;
+    background-color: #fbfbfb;
 }
 
-.contact-container {
-    max-width: 600px;
+.contact-card {
+    max-width: 700px;
     margin: 0 auto;
+    background-color: #ffffff;
+    padding: 3em;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+}
+
+.contact-header {
     text-align: center;
-}
-
-.contact-container h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-}
-
-.contact-container p {
-    color: #666666;
     margin-bottom: 2.5em;
+}
+
+.contact-header h2 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.contact-header p {
+    color: #666666;
+    margin: 0.5em 0 0 0;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.2em;
+    gap: 1.5em;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5em;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 1em;
-    border: 1px solid #e0e0e0;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    width: 100%;
+    padding: 1.2em;
+    border: 1px solid #eeeeee;
+    background-color: #fafafa;
+    border-radius: 12px;
     font-family: inherit;
-    font-size: 1em;
+    font-size: 0.95em;
     outline: none;
-    transition: border-color 0.2s;
+    transition: all 0.2s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #1a1a1a;
+    background-color: #ffffff;
 }
 
 .contact-form button {
-    padding: 1em;
+    padding: 1.2em;
     background-color: #1a1a1a;
     color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s;
+    margin-top: 1em;
 }
 
 .contact-form button:hover {
     background-color: #333333;
 }
 
-.main-footer {
-    background-color: #ffffff;
+.footer {
     padding: 4em 4em;
-    border-top: 1px solid #eeeeee;
+    background-color: #ffffff;
+    border-top: 1px solid #f0f0f0;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.footer-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5em;
+    gap: 1em;
+    color: #999999;
 }
 
-.footer-logo {
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-.footer-content p {
-    color: #888888;
-    font-size: 0.9em;
-    margin: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 2em;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #666666;
+.footer-bottom p {
     font-size: 0.85em;
+    margin: 0;
 }
 
 @media (max-width: 992px) {
@@ -314,7 +313,6 @@ body {
         padding: 1.2em 2em;
     }
     .form-container {
-        gap: 1em;
         padding: 1.5em;
     }
     .form-container select, .form-container input {
@@ -338,13 +336,17 @@ body {
         gap: 1.5em;
     }
     .title h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
     #home {
         height: auto;
         padding: 6em 1em;
     }
-    .main-footer {
-        padding: 3em 1em;
+    .form-row {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    .contact-card {
+        padding: 2em;
     }
 }
